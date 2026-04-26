@@ -96,12 +96,7 @@ def metric_html(title, value, unit, fmt=".2f", style_class=""):
 #   SIDEBAR & GLOBAL SETTINGS
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("""
-    <div style='text-align:center; padding: 10px 0 20px 0;'>
-        <span style='font-size: 2.5rem;'>⚡</span><br>
-        <span style='font-size: 1.1rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;'>HX Analyzer</span>
-    </div>
-    """, unsafe_allow_html=True)
+    st.image("Gemini_Generated_Image_thcxg2thcxg2thcx.png", use_container_width=True)
     
     st.markdown("### ⚙️ System Geometry")
     A_HX = st.number_input("Heat Transfer Area ($m^2$)", value=0.02, step=0.005, format="%.4f")
