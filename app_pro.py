@@ -96,7 +96,12 @@ def metric_html(title, value, unit, fmt=".2f", style_class=""):
 #   SIDEBAR & GLOBAL SETTINGS
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.image("Gemini_Generated_Image_thcxg2thcxg2thcx.png", use_container_width=True)
+    st.markdown("""
+    <div style='text-align:center; padding: 10px 0 20px 0;'>
+        <span style='font-size: 2.5rem;'>⚡</span><br>
+        <span style='font-size: 1.1rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;'>HX Analyzer</span>
+    </div>
+    """, unsafe_allow_html=True)
     
     st.markdown("### ⚙️ System Geometry")
     A_HX = st.number_input("Heat Transfer Area ($m^2$)", value=0.02, step=0.005, format="%.4f")
@@ -436,7 +441,7 @@ with tab_theory:
     st.latex(r''' \epsilon = \frac{Q}{Q_{max}} = \frac{Q}{C_{min}(T_{h,i} - T_{c,i})} ''')
     st.latex(r''' NTU = \frac{UA}{C_{min}} ''')
     
-    st.markdown("#### Theoretical Effectiveness ($\epsilon$)")
+    st.markdown(r"#### Theoretical Effectiveness ($\epsilon$)")
     st.markdown("**Parallel Flow:**")
     st.latex(r''' \epsilon = \frac{1 - \exp[-NTU(1 + C_r)]}{1 + C_r} ''')
     st.markdown("**Counter Flow:**")
